@@ -35,8 +35,11 @@ function init() {
     camera.position.z = 1000;
 
     // Add textures
-    var cubetexture = new THREE.ImageUtils.loadTexture('img/cubeTexture.jpg');
-    var cointexture = new THREE.ImageUtils.loadTexture('img/coin.png');
+    //var cubetexture = new THREE.ImageUtils.loadTexture('img/cubeTexture.jpg');
+    //var cointexture = new THREE.ImageUtils.loadTexture('img/coin.png');
+    var cubetexture = new THREE.ImageUtils.loadTexture('http://i.imgur.com/h3Gb0Ta.jpg');
+    var cointexture = new THREE.ImageUtils.loadTexture('http://i.imgur.com/1H5NRmU.png');
+    
     
     // Add geometries
 
