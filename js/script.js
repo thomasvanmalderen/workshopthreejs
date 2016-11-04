@@ -6,7 +6,7 @@ var geometry, material, mesh;
 var userOpts = {
     range: 150,
     duration: 100,
-    delay: 200,
+    delay: 0,
     easing: 'Elastic.EaseInOut'
 };
 
@@ -41,7 +41,7 @@ function setupTween() {
     var update = function () {
         mesh.position.y = current.y;
     };
-    var current = {y: -userOpts.range};
+    var current = {y: userOpts.range};
 
 
     TWEEN.removeAll();
@@ -51,24 +51,28 @@ function setupTween() {
 
 
     var tweenHead = new TWEEN.Tween(current)
-        .to({y: +userOpts.range}, userOpts.duration)
+        .to({y: 0}, userOpts.duration)
         //.delay(userOpts.delay)
         //.easing(easing)
         .onUpdate(update);
 
 
     var tweenBack = new TWEEN.Tween(current)
-        .to({y: -userOpts.range}, userOpts.duration)
+        .to({y: 0}, userOpts.duration)
         //.delay(userOpts.delay)
         //.easing(easing)
         .onUpdate(update);
 
-    tweenHead.chain(tweenBack);
+    
 
 
-    tweenBack.chain(tweenHead);
-
+    //tweenBack.chain(tweenHead);
+    //tweenHead.chain(tweenBack);
+    //tweenBack.start();
     tweenHead.start();
+    tweenBack.start();
+    
+    
 }
 
 function animate() {

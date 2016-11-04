@@ -1,5 +1,5 @@
 body{
     overflow: hidden;
     background-image: url('https://s-media-cache-ak0.pinimg.com/originals/14/5c/72/145c7257bd31a6b456991cd0147a029f.jpg');
-    background-size: auto;
+    background-size: fill;
 }
