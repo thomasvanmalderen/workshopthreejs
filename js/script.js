@@ -93,7 +93,7 @@ function setupTween() {
     var tweenBack2 = new TWEEN.Tween(current2)
         .to({y: 0}, coinOpts.duration)
         //.delay(userOpts.delay)
-        .easing(TWEEN.Easing.Exponential.In)
+        .easing(TWEEN.Easing.Back.Out)
         .onUpdate(update);
 
     
